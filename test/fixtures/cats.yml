@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  sex: MyString
+  color: MyString
+  age: 1
+  size: MyString
+  spayed-neutered: false
+  house-trained: false
+  medical-notes: MyString
+  human-notes: MyString
+  other-pet-notes: MyString
+  description: MyString
+  adopted: false
+
+two:
+  name: MyString
+  sex: MyString
+  color: MyString
+  age: 1
+  size: MyString
+  spayed-neutered: false
+  house-trained: false
+  medical-notes: MyString
+  human-notes: MyString
+  other-pet-notes: MyString
+  description: MyString
+  adopted: false

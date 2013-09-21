@@ -1,4 +1,6 @@
 class CatsController < ApplicationController
+	before_action :find_cat, only: [:update, :edit, :show]
+
 	def index
 		@cats = Cat.all
 	end 
@@ -20,5 +22,12 @@ class CatsController < ApplicationController
 
 	def show
 	end
+
+	private
+
+	def find_cat
+		@cat = Cat.find params[:id]
+	end
+
 	
 end

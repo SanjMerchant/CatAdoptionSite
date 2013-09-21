@@ -5,7 +5,9 @@ class CreateCats < ActiveRecord::Migration
       t.string :sex
       t.string :color
       t.date :DOB
-      t.string :size
+      t.float :length #nose to base of tail
+      t.float :height #paw to shoulder
+      t.float :weight
       t.boolean :spayed_neutered
       t.boolean :house_trained
       t.string :medical_notes

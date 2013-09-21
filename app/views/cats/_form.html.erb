@@ -11,12 +11,48 @@
   <%= f.text_area :color %>
   </div>
   <div>
-  <%= f.label :age %>
-  <%= f.number_field :year_released, min: 1886, max: Date.today.year %>
+  <%= f.label :DOB, "Date of Birth" %>
+  <%= f.number_field :DOB, max: Date.today.year %>
+  </div>
+  <%= f.label :length %>
+  <%= f.number_field :length %>
   </div>
   <div>
-  <%= f.label :rating %>
-  <%= f.number_field :rating, min: 1, max: 5 %>
+  <%= f.label :height %>
+  <%= f.number_field :height %>
   </div>
+  <div>
+  <%= f.label :weight %>
+  <%= f.number_field :weight %>
+  </div>
+  <div>
+  <%= f.label :spayed_neutered, "Spayed/Neutered?" %>
+  <%= f.check_box :spayed_neutered %>
+  </div>
+  <div>
+  <%= f.label :house_trained, "House Trained?" %>
+  <%= f.check_box :house_trained %>
+  </div>
+  <div>
+  <%= f.label :medical_notes, "Medical Notes" %>
+  <%= f.text_area :medical_notes %>
+  </div>
+  <div>
+  <%= f.label :human_notes, "Notes on interactions with humans" %>
+  <%= f.text_area :human_notes %>
+  </div>
+  <div>
+  <%= f.label :other_pet_notes, "Notes on interactions with other pets" %>
+  <%= f.text_area :other_pet_notes %>
+  </div>
+  <div>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  </div>
+  <div>
+  <%= f.label :adopted, "Already Adopted?" %>
+  <%= f.check_box :adopted %>
+  </div>
+  
   <%= f.submit %>
 <% end %>

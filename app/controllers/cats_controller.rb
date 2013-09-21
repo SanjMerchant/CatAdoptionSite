@@ -3,6 +3,11 @@ class CatsController < ApplicationController
 		@cats = Cat.all
 	end
 
+	def new
+		@cat = Cat.new
+	end
+
+
 	def show
 	end
 	

@@ -2,6 +2,8 @@ CatAdoptionSite::Application.routes.draw do
 
      resources :cats
 
+     get 'cats/:id/name' => 'cats#name', as: :name
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

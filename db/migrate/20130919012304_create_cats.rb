@@ -4,7 +4,7 @@ class CreateCats < ActiveRecord::Migration
       t.string :name
       t.string :sex
       t.string :color
-      t.integer :age
+      t.date :DOB
       t.string :size
       t.boolean :spayed_neutered
       t.boolean :house_trained

@@ -1,0 +1,5 @@
+<% @cats.each do |cat| %>
+  <section>
+    <p><%= link_to cat.name, cat %> <%= cat.color %> <%= cat.age %></p>
+  </section>
+<% end %>

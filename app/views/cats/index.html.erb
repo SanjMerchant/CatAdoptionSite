@@ -1,8 +1,4 @@
 <h1>Adopt Some Cats!</h1>
 
 <p><b>Name Color Age</b></p>
-<% @cats.each do |cat| %>
-  <section>
-    <p><%= link_to cat.name, cat %> <%= cat.color %> <%= cat.age %></p>
-  </section>
-<% end %>
+<%= render 'list' %>

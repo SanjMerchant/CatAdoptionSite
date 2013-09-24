@@ -1,3 +1,13 @@
+<% if @cat.errors.any? %>
+  <h2>There were errors saving the cat's information.</h2>
+  <ul>
+    <% @cat.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
 <h1><%= @cat.name %></h1>
 
 <b><% if @cat.adopted == true %>

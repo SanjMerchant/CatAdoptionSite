@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919012304) do
+ActiveRecord::Schema.define(version: 20130921195953) do
 
   create_table "cats", force: true do |t|
     t.string   "name"
-    t.string   "sex"
+    t.boolean  "sex",             limit: 255
     t.string   "color"
     t.date     "DOB"
     t.float    "length"

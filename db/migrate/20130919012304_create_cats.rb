@@ -2,7 +2,7 @@ class CreateCats < ActiveRecord::Migration
   def change
     create_table :cats do |t|
       t.string :name
-      t.string :sex
+      t.string :sex #changed to boolean in next migration
       t.string :color
       t.date :DOB
       t.float :length #nose to base of tail

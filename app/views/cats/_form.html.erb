@@ -3,8 +3,8 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   </div>
-  <%= f.label :sex %>
-  <%= f.text_field :sex %>
+  <%= f.label :sex, "Is cat male?" %>
+  <%= f.check_box :sex %>
   </div>  
   <div>
   <%= f.label :color %>
@@ -12,7 +12,7 @@
   </div>
   <div>
   <%= f.label :DOB, "Date of Birth" %>
-  <%= f.number_field :DOB, max: Date.today.year %>
+  <%= f.date_field :DOB, max: Date.today.year %>
   </div>
   <%= f.label :length %>
   <%= f.number_field :length %>

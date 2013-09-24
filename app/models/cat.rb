@@ -12,4 +12,12 @@ class Cat < ActiveRecord::Base
 		end
 	end
 
+	def spay_neuter_in_words
+		if self.sex == true
+			return "neutered"
+		else
+			return "spayed"
+		end
+	end
+
 end

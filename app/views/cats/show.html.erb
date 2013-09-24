@@ -1,32 +1,39 @@
 <h1><%= @cat.name %></h1>
 
 <b><% if @cat.adopted == true %>
-	<%= @cat.name + " has already been adopted.  Congratulations, " + @cat.name + "!" %>
+	<%= "#{@cat.name} has already been adopted.  Congratulations, #{@cat.name}!" %>
 <% end %></b>
 
 <p>Description:</p>
 <p><%= @cat.description %></p>
 
 <p>Sex:  <%= @cat.sex_in_words %></p>
+
 <p>Color:  <%= @cat.color %></p>
-<p>Age:  <font color = FF0000><%= "Cat's age goes here as soon as errors are resolved." %></color></p>
+
+<p>Age:  <%= "Cat's age goes here as soon as errors are resolved." %></p>
+
 <p>Length (nose to base of tail, cm):  <%= @cat.length %></p>
+
 <p>Height (up to shoulder, cm):  <%= @cat.height %></p>
-<p>Weight (kg):  <%= @cat.sex %></p>
-<b><% if @cat.spayed_neutered == true %>
-	<%= @cat.name + " has already been adopted.  Congratulations, " + @cat.name + "!" %>
-<% end %></b>
 
+<p>Weight (kg):  <%= @cat.weight %></p>
 
+<p><% if @cat.spayed_neutered == false %>
+		<%= "Not " %>
+	<% end %>
+	<%= @cat.spay_neuter_in_words.capitalize %></p>
 
-<p>Medical Notes:</p>
+<p><% if @cat.house_trained == false %>
+		<%= "Not " %>
+	<% end %>
+	Litterbox-Trained</p>
+
+<p><b>Medical Notes:</b></p>
 <p><%= @cat.medical_notes %></p>
-<p>Notes on intreaction with humans:</p>
-<p><%= @cat.human_notes %></p>
-<p>Notes on intreaction with other animals:</p>
-<p><%= @cat.other_pet_notes %></p>
 
-<!--
-      t.boolean :spayed_neutered
-      t.boolean :house_trained
--->
+<p><b>Notes on intreaction with humans:</b></p>
+<p><%= @cat.human_notes %></p>
+
+<p><b>Notes on intreaction with other animals:</b></p>
+<p><%= @cat.other_pet_notes %></p>

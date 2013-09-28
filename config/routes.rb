@@ -1,10 +1,6 @@
 CatAdoptionSite::Application.routes.draw do
-=begin
-    devise_for :users
-    root "cats#index"
-    resources :cats
-    get 'search', to 'cats#search'
-=end
+  devise_for :admins
+  devise_for :users
 
     get 'cats/search' => 'cats#search'
 

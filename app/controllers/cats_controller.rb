@@ -1,4 +1,5 @@
 class CatsController < ApplicationController
+	before_filter :authenticate_user!
 	before_action :find_cat, only: [:update, :edit, :show]
 
 	def index

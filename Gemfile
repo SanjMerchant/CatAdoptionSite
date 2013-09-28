@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#Login with Google via Omniauth
+gem 'omniauth-google-oauth2'
+
 #Adding devise
 gem 'devise'
 

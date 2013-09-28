@@ -2,6 +2,8 @@ CatAdoptionSite::Application.routes.draw do
   devise_for :admins
   devise_for :users
 
+    root :to => "home#index"
+
     get 'cats/search' => 'cats#search'
 
      resources :cats

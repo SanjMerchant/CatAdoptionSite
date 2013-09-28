@@ -1,8 +1,17 @@
 CatAdoptionSite::Application.routes.draw do
+=begin
+    devise_for :users
+    root "cats#index"
+    resources :cats
+    get 'search', to 'cats#search'
+=end
+
+    get 'cats/search' => 'cats#search'
 
      resources :cats
 
      get 'cats/:id/name' => 'cats#name', as: :name
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

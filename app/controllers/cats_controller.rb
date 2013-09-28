@@ -22,6 +22,10 @@ class CatsController < ApplicationController
 		@cat = Cat.new
 	end
 
+	def search
+    	query = params[:q]                                                             
+    	@cats = Cat.search_for query 
+  	end
 
 	def show
 	end

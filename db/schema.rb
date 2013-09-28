@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130921195953) do
+ActiveRecord::Schema.define(version: 20130928180950) do
 
   create_table "cats", force: true do |t|
     t.string   "name"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 20130921195953) do
     t.string   "other_pet_notes"
     t.string   "description"
     t.boolean  "adopted"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "password"
+    t.string   "current_pets"
+    t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

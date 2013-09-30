@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#Login with Twitter via Omniauth
+gem 'omniauth-twitter'
+
 #Login with Google via Omniauth
 gem 'omniauth-google-oauth2'
 

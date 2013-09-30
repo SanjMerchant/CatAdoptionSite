@@ -2,13 +2,17 @@ CatAdoptionSite::Application.routes.draw do
   devise_for :admins
   devise_for :users
 
-    root :to => "home#index"
+    root :to => "cats#index"
 
     get 'cats/search' => 'cats#search'
 
-     resources :cats
+     resources :cats, except: :edit
+
+     get 'cats/:id/edit' => 'cats#:id#edit', as: :edit
 
      get 'cats/:id/name' => 'cats#name', as: :name
+
+     get '/auth/twitter/callback', to: 'sessions#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

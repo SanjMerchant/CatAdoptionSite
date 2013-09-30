@@ -19,6 +19,10 @@ class CatsController < ApplicationController
 	def edit
 	end
 
+	def id_num
+		return cat.id.to_i
+	end
+
 	def new
 		@cat = Cat.new
 	end

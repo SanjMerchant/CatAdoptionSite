@@ -6,9 +6,9 @@ CatAdoptionSite::Application.routes.draw do
 
     get 'cats/search' => 'cats#search'
 
-     resources :cats, except: :edit
+     resources :cats #, except: :edit
 
-     get 'cats/:id/edit' => 'cats#:id#edit', as: :edit
+    # get 'cats/:id/edit' => 'cats#:id#edit', as: :edit
 
      get 'cats/:id/name' => 'cats#name', as: :name
 

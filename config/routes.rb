@@ -4,7 +4,7 @@ CatAdoptionSite::Application.routes.draw do
 
     root :to => "cats#index"
 
-    get 'cats/search' => 'cats#search'
+    get 'cats/search' => 'cats#search', as: :search
 
      resources :cats #, except: :edit
 
